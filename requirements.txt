@@ -1,0 +1,38 @@
+# ---- Phase 1: Ingestion & pipeline ----
+kafka-python
+faker
+pyspark==3.5.0
+psycopg2-binary
+apache-airflow==2.9.3
+great-expectations
+
+# ---- Phase 2: Feature engineering & ML model ----
+scikit-learn
+pandas
+numpy
+mlflow
+xgboost
+feast  # optional — skip if you go with plain SQL views instead
+
+# ---- Phase 3: Model serving ----
+fastapi
+uvicorn[standard]
+pydantic
+joblib
+
+# ---- Phase 4: LLM / RAG explanation layer ----
+anthropic
+chromadb
+sentence-transformers
+tiktoken
+
+# ---- Phase 5: Monitoring & observability ----
+streamlit
+evidently  # data/model drift detection
+
+# ---- Phase 6: CI/CD & IaC ----
+# (Terraform and GitHub Actions run outside Python — nothing to pip install)
+
+# ---- Dev/testing, used throughout ----
+pytest
+python-dotenv
